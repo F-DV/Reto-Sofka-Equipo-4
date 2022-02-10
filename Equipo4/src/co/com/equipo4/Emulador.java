@@ -1,5 +1,7 @@
 package co.com.equipo4;
 
+import java.util.Arrays;
+
 import static java.lang.Integer.parseInt;
 
 public class Emulador {
@@ -60,11 +62,11 @@ public class Emulador {
                         registros[parseInt(token[1].substring(1))] = Long.parseLong(valorINVinv, 2);
                         break;
                     case "JMP":
-                        i = parseInt(token[1]);
+                        i = parseInt(token[1]) - 2;
                         break;
                     case "JZ":
                         if (registros[0] == 0) {
-                            i = parseInt(token[1]);
+                            i = parseInt(token[1]) - 2;
                         }
                         break;
                     case "NOP":
@@ -77,4 +79,5 @@ public class Emulador {
             System.out.println("Cantidad de instrucciones incorrecta.");
         }
     }
+
 }
