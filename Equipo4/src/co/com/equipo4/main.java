@@ -18,5 +18,6 @@ public class main {
         em.emular(subrutina);
         System.out.println("Registros");
         System.out.println(Arrays.toString(em.registros));
+
     }
 }

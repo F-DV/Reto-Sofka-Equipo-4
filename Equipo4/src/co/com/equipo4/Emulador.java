@@ -6,7 +6,7 @@ public class Emulador {
     static long[] registros = new long[43];
 
     public static void emular(String[] subrutina) {
-        if(subrutina.length >= 1 && subrutina.length <= 1024){
+        if (subrutina.length >= 1 && subrutina.length <= 1024) {
             for (int i = 0; i < subrutina.length; i++) {
                 String[] token = subrutina[i].split("[\\s+,]");
                 switch (token[0]) {
@@ -60,11 +60,11 @@ public class Emulador {
                         registros[parseInt(token[1].substring(1))] = Long.parseLong(valorINVinv, 2);
                         break;
                     case "JMP":
-                        i = parseInt(token[1].substring(1));
+                        i = parseInt(token[1]);
                         break;
                     case "JZ":
-                        if(registros[0] == 0){
-                            i = parseInt(token[1].substring(1));
+                        if (registros[0] == 0) {
+                            i = parseInt(token[1]);
                         }
                         break;
                     case "NOP":
