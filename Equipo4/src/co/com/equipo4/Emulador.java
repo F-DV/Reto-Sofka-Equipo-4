@@ -9,7 +9,7 @@ import java.util.Arrays;
  *  - Veronica Pava Rodriguez
  *  - Daniel Mauricio Naranjo Benavides
  *  - Johan Muñeton Muñeton
- *  - Felipe Quiceno Gonzales
+ *  - Felipe Quiceno Gomez
  */
 import static java.lang.Integer.parseInt;
 
